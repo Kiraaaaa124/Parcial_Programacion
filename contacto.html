@@ -1,38 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-    <link rel="stylesheet" href="static/contacto.css">
+    <title>Contacto y Reservas - Brillo & Estilo</title>
+    <link rel="stylesheet" href="static/index.css"> 
 </head>
 <body>
     <header id="header">
         <div class="center">
             <div id="logo">
-                <img src="https://th.bing.com/th/id/OIP.Fi8ZQPp1-wr39ZEDYfpfWQHaGL?w=235&h=196&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" class="app-logo" alt="Logotipo">
+                <h2 class="logo-texto-simple">Brillo &amp; Estilo</h2>
             </div>
             <nav id="menu">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="index.html#SobreNosotros">Sobre Nosotros</a></li>
-                    <li><a href="index.html#Servicios">Servicios</a></li>
-                    <li><a href="index.html#Galeria">Galería</a></li>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="productos.html">PRODUCTOS</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                    <li><a href="index.html#SobreNosotros">SOBRE NOSOTROS</a></li>
+                    <li><a href="index.html#Servicios">SERVICIOS</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    <main>
-      
-    </main>
-
+    <div id="wrapper" class="center">
+        <main id="main-content">
+            <h1>Agenda tu Cita o Consulta</h1> 
+            <form id="form-contacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+                    <span class="error-message" id="error-nombre"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com">
+                    <span class="error-message" id="error-email"></span>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿Qué servicio te interesa?"></textarea>
+                    <span class="error-message" id="error-mensaje"></span>
+                </div>
+                
+                <button type="submit" id="btn-enviar">Enviar Consulta</button>
+            </form>
+            <div id="mensaje-exito">
+                ¡Mensaje enviado! Te contactaremos pronto para confirmar tu cita.
+            </div>
+        </main>
+        <aside id="sidebar">
+            <h2>Nuestra Ubicación</h2>
+            <p>Calle Ficticia #456, Salón Premium.</p>
+            <p>Tel: (011) 5555-BE01</p>
+            <h3>Horarios</h3>
+            <p>Lun a Vie: 9:00 - 19:00</p>
+            <p>Sábados: 10:00 - 15:00</p>
+        </aside>
+    </div>
     <footer id="footer">
         <div class="center">
-            <p>&copy; aaa</p>
+            <p>&copy; 2025 Brillo & Estilo | Salón Premium</p>
         </div>
     </footer>
+    <script src="java/contacto.js"></script>
 </body>
 </html>
